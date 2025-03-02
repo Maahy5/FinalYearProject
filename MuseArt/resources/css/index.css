@@ -1,0 +1,56 @@
+/* Ensure the navigation bar is styled properly */
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and settings dropdown */
+    align-items: center;
+    padding: 0 1rem;
+    background-color: #ffffff; /* Light mode */
+}
+
+.nav-container.dark {
+    background-color: #22dd33; /* Example color for dark mode */
+}
+
+/* Style for dropdown menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem;
+    display: none;
+    z-index: 10;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.hamburger {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hamburger {
+        display: inline-flex;
+    }
+
+    .nav-container .hidden.sm\\:flex {
+        display: none; /* Hide dropdown on smaller screens */
+    }
+
+    .responsive-menu {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        background-color: #f9f9f9;
+        border-top: 1px solid #ccc;
+    }
+}
